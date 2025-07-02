@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+{%if diddy_bluds != ohio_bluds%}
+    {% for x in ohio_bluds %}
+        <h1> {{x}} </h1>
+    {% endfor %}
+{% endif %}
+
+<p> In views.py, you can see what the fruit variable looks like. </p>
+
+{% with var1="mustard" %}
+    {% with var2="mustard" %}
+        {% if var1 == var2 %}
+            <h1>MUSTAARDDDDD</h1>
+        {% else %}
+            <h1>FREAKMA</h1>
+        {% endif %}
+    {% endwith %}
+{% endwith %}
+
+{% with me="NotVS" sponsor="AMOGUS"%}
+    {% include "mymenu.html" %}
+{% endwith %}
+</body>
+</html>
+
+
+<table border = '1'>
+    <tr>
+        <th>ID</th>
+        <th>FirstName</th>
+        <th>LastName</th>
+    

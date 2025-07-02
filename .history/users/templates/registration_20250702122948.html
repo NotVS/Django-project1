@@ -1,0 +1,32 @@
+{% extends 'master.html' %}
+
+{% block title %}
+    Register a New User
+{% endblock %}
+
+{% block content %}
+    <h1> Register a New User </h1>
+    <form action="/users/registration/" method = "post"></form>
+        {% csrf_token %}
+
+        <label for="first_name">First Name:</label>
+        <input type="text" id = "first_name" name = "first_name"><br><br>
+
+
+        <label for="last_name">Surname:</label>
+        <input type="text" id = "last_name" name = "last_name"><br><br>
+
+        <label for="username">Username:</label>
+        <input type="text" id = "username", name = "username"><br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id = "password", name = "password"><br><br>
+    
+        <label for="phone">Phone:</label>
+        <input type="text" id = "phone", name = "phone"><br><br>
+
+    
+        <button> Submit </button>
+    </form>
+
+{% endblock%}

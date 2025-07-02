@@ -1,0 +1,20 @@
+{% extends 'master.html' %}
+
+{% block title %}
+    Register a New User
+{% endblock %}
+
+{% block content %}
+    <h1> Register a New User </h1>
+    <form class= "form-with-validation"action="/users/register/
+    " method = "post"></form>
+        {% csrf_token %}
+        {{ form }}
+
+        <label for="custom_input">First Name:</label>
+        <input type="text"> id = "custom_input" name = "custom_data"
+
+        <button> Submit </button>
+    </form>
+
+{% endblock%}
