@@ -1,0 +1,28 @@
+{% extends "master2.html" %}
+
+{% block title %}
+    View your crops + details
+{% endblock %}
+
+
+{% block content %}
+<h1> CHIGMAAAA </h1>
+<p> bruh moment </p>
+
+{% if my_crops %}
+    <ul>
+    {% for crop in my_crops %}
+        <li> {{crop.crop_type}} - {{crop.location}} - {{crop.area}} - {{crop.price_per_m2}} - {{crop.planted_date}} - {{crop.harvest_date}}
+            
+    {% endfor %}
+    </ul>
+
+    <h2> Crop Charts </h2>
+    <img src="{% url 'crop_chart'}"
+
+{% else %}
+    <p> Try buying crops from David Diddy Luiz because you can't find any here </p>
+
+{% endif %}
+
+{% endblock %}

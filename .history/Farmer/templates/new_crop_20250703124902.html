@@ -1,0 +1,36 @@
+{% extends "master2.html" %}
+
+{% block title %}
+    You want a new crop?
+{% endblock %}
+
+{% block content %}
+    <h1> Register here </h1>
+
+    {% if error %}
+        <p style="color : red;">{{ error }}</p>
+    {% endif %}
+
+    <form action="/new_crop/" method="post">
+
+
+        {% csrf_token %}
+
+        <label for = "crop_type"> Crop Type </label>
+        <input type = "text" id = "crop_type" name = "crop_type"><br><br>
+
+        <label for = "location"> Location </label>
+        <input type = "text" id = "location" name = "location"><br><br>
+        
+        <label for = "area"> Area </label>
+        <input type = "float" id = "area" name = "area"><br><br>
+        
+
+
+        <button> Submit </button>
+    
+    </form>
+
+
+
+{% endblock %}

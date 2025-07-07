@@ -1,0 +1,17 @@
+{% extends "master2.html" %}
+
+{% block title %}
+    View your crops + details
+{% endblock %}
+
+
+{% block content %}
+<h1> CHIGMAAAA </h1>
+<p> bruh moment </p>
+
+{% if my_crops %}
+    <ul>
+    {% for crop in my_crops %}
+        <li> {{crop.crop_type}} - {{crop.location}}
+
+{% endblock %}

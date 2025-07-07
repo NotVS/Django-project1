@@ -1,0 +1,31 @@
+{% extends "master2.html" %}
+
+{% block title %}
+    You want a new crop?
+{% endblock %}
+
+{% block content %}
+    <h1> Register here </h1>
+
+    {% if error %}
+        <p style="color : red;">{{ error }}</p>
+    {% endif %}
+
+    <form action="/new_crop/" method="post">
+
+
+        {% csrf_token %}
+
+        <label for = "crop"> E-Mail </label>
+        <input type = "email" id = "email" name = "email"><br><br>
+
+        <label for = "password"> Password </label>
+        <input type = "password" id = "password" name = "password"><br><br>
+        
+        <button> Submit </button>
+    
+    </form>
+
+
+
+{% endblock %}

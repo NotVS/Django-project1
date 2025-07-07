@@ -1,0 +1,28 @@
+{% extends "master2.html" %}
+
+{% block title %}
+    Login Page 2
+{% endblock %}
+
+{% block content %}
+    <h1> Login-2 </h1>
+    
+    {% if error %}
+        <p style
+
+    <form action="/login2" method="post">
+
+
+        {% csrf_token %}
+
+        <label for = "email"> E-Mail </label>
+        <input type = "email" id = "email" name = "email"><br><br>
+
+        <label for = "password"> Password </label>
+        <input type = "password" id = "password" name = "password"><br><br>
+        
+        <button> Submit </button>
+    
+    </form>
+
+{% endblock %}
