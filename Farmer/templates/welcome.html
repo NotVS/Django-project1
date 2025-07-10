@@ -1,0 +1,19 @@
+{% extends "master2.html" %}
+
+{% block title %}
+Welcome Page
+{% endblock %}
+
+{% block content %}
+
+{% if farmer.verified %}
+    <h1> Welcome, {{farmer.first_name}} </h1>
+    <p> You have successfully verified your details. </p>
+
+
+{% else %}
+    <h1> Details Not Verified </h1>
+
+
+{% endif %}
+{% endblock %}
